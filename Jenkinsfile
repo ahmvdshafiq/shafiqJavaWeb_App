@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git credentialsId: 'e8551ec0-ebef-47c4-a303-1f2f79bd64c4', url: 'https://github.com/ahmvdshafiq/shafiqJavaWeb_App.git'
+                git branch: 'main', credentialsId: 'e8551ec0-ebef-47c4-a303-1f2f79bd64c4', url: 'https://github.com/ahmvdshafiq/shafiqJavaWeb_App.git'
             }
         }
         stage('Build') {
