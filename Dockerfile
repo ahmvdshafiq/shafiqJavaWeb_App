@@ -18,10 +18,10 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the packaged JAR file from the build stage
-COPY --from=build /app/target/your-application.jar ./your-application.jar
+COPY --from=build /app/target/demo-0.0.1-SNAPSHOT.jar ./demo-0.0.1-SNAPSHOT.jar
 
 # Specify the command to run the application
-ENTRYPOINT ["java", "-jar", "your-application.jar"]
+ENTRYPOINT ["java", "-jar", "demo-0.0.1-SNAPSHOT.jar"]
 
 # Expose the application port
 EXPOSE 8080
