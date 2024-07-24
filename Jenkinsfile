@@ -45,7 +45,7 @@ pipeline {
             steps {
                 script {
                     // Deploy Docker container (optional)
-                    sh "docker run -d -p 8080:8080 ${DOCKER_IMAGE}"
+                    sh "docker run -d -p 5000:5000 ${DOCKER_IMAGE}"
                 }
             }
         }
