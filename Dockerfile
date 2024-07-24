@@ -4,9 +4,9 @@ FROM maven:3.8.6-jdk-11 AS build
 # Set the working directory
 WORKDIR /app
 
-# Copy the pom.xml and source code into the container
-COPY pom.xml .
-COPY src ./src
+# Copy the pom.xml and source code into the container from the demo directory
+COPY demo/pom.xml .
+COPY demo/src ./src
 
 # Package the application
 RUN mvn clean package
