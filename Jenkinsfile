@@ -14,9 +14,11 @@ pipeline {
         }
         stage('Build') {
             steps {
-                script {
-                    // Build the application using Maven
-                    sh 'mvn clean package'
+                dir('demo') {
+                    script {
+                        // Build the application using Maven
+                        sh 'mvn clean package'
+                    }
                 }
             }
         }
