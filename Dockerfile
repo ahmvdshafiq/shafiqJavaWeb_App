@@ -1,4 +1,4 @@
-# Use an OpenJDK image with JDK 17 for building // webhook triggered 01
+# Use an OpenJDK image with JDK 17 for building // webhook triggered test
 FROM openjdk:17-jdk-slim AS build
 
 # Install Maven
