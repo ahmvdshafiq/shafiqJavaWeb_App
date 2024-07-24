@@ -12,7 +12,7 @@ COPY demo/src ./src
 RUN mvn clean package
 
 # Use an official OpenJDK runtime as the base image for running the application
-FROM openjdk:17-jre
+FROM openjdk:17-oracle
 
 # Set the working directory
 WORKDIR /app
