@@ -1,10 +1,10 @@
-# Use an official Maven image to build the application
-FROM maven:3.8.6-jdk-11 AS build
+# Use an official Maven image with JDK 17 to build the application
+FROM maven:3.8.6-openjdk-17 AS build
 
 # Set the working directory
 WORKDIR /app
 
-# Copy the pom.xml and source code into the container from the demo directory
+# Copy the pom.xml and source code into the container
 COPY demo/pom.xml .
 COPY demo/src ./src
 
@@ -12,7 +12,7 @@ COPY demo/src ./src
 RUN mvn clean package
 
 # Use an official OpenJDK runtime as the base image for running the application
-FROM openjdk:11-jre-slim
+FROM openjdk:17-jre-slim
 
 # Set the working directory
 WORKDIR /app
