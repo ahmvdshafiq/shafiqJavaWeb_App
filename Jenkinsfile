@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_CREDENTIALS_ID = 'f188c2a0-6cc1-49c6-8ad5-cc59d022923c' // Docker credentials ID in Jenkins
+        DOCKER_CREDENTIALS_ID = 'bbf923c4-71cf-4bb5-afd9-71cc833208d5' // Docker credentials ID in Jenkins
         DOCKER_IMAGE = 'madbakoyoyo/java-web-app' // Docker image name
     }
 
